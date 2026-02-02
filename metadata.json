@@ -1,0 +1,8 @@
+
+{
+  "name": "Giuseppe Basile | Atelier Digitale",
+  "description": "An elegant React application for creating personalized digital cards and tributes for birthdays, anniversaries, and memorials, featuring a Gemini-powered AI greeting assistant.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

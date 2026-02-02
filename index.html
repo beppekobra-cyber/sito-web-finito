@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giuseppe Basile | Atelier Digitale</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              obsidian: '#030303',
+              gold: '#D4AF37',
+            },
+            fontFamily: {
+              serif: ['Lora', 'serif'],
+              'serif-display': ['Cormorant Garamond', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #030303;
+        color: white;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+      .gold-gradient {
+        background: linear-gradient(135deg, #D4AF37 0%, #F1D382 50%, #D4AF37 100%);
+      }
+      .gold-text {
+        background: linear-gradient(135deg, #D4AF37 0%, #F1D382 50%, #D4AF37 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      ::selection {
+        background: #D4AF37;
+        color: black;
+      }
+      .grain-bg {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-up {
+        animation: fadeIn 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+      }
+      @keyframes respirate {
+        0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.15; }
+        50% { transform: scale(1.15) translate(30px, -30px); opacity: 0.25; }
+      }
+      @keyframes respirate-slow {
+        0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.12; }
+        50% { transform: scale(1.1) translate(-40px, 40px); opacity: 0.2; }
+      }
+      .animate-respirate {
+        animation: respirate 18s ease-in-out infinite;
+      }
+      .animate-respirate-slow {
+        animation: respirate-slow 24s ease-in-out infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
